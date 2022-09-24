@@ -15,6 +15,8 @@ Tools Requirement
 PHP v7.4.19
 
 Laragon or XAMPP
+
+Postman
 ```
 
 1. Clone GitHub repo for this project locally
@@ -55,5 +57,120 @@ In the .env file fill in the DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME, and DB_
 ```markdown
 
 php artisan migrate
+
+```
+
+# How to Access Endpoint
+*note admin with roles = ADMIN in table users
+
+## ADMIN
+
+Create Data Course from Admin
+```css
+POST: http://online-learning-platform.test/api/admin/course
+
+```
+
+Get Data list Course from Admin
+```css
+GET: http://online-learning-platform.test/api/admin/course
+
+```
+
+Edit Data Course from Admin
+```css
+GET: http://online-learning-platform.test/api/admin/course/{id}
+
+```
+
+Update Data Course from Admin
+```css
+PUT: http://online-learning-platform.test/api/admin/course/{id}
+
+```
+
+Delete Data Course from Admin
+```css
+DELETE: http://online-learning-platform.test/api/admin/course/{id}
+
+```
+
+Delete User from Admin
+```css
+DELETE: http://online-learning-platform.test/api/admin/user/{id}
+
+```
+
+Get Dashboard Statistic
+```css
+GET: http://online-learning-platform.test/api/admin/dashboard
+
+```
+
+## USER
+
+Register
+```css
+POST: http://online-learning-platform.test/api/register
+
+```
+
+Login
+```css
+POST: http://online-learning-platform.test/api/login
+
+```
+
+Logout
+```css
+POST: http://online-learning-platform.test/api/logout
+
+```
+
+Get Data list Course byCategory
+```css
+GET: http://online-learning-platform.test/api/course?category={new,popular}
+
+```
+
+Get Data list Popular Category Course
+```css
+GET: http://online-learning-platform.test/api/course?category=popular
+
+```
+
+Get Data list Course
+```css
+GET: http://online-learning-platform.test/api/course
+
+```
+
+Get Data Detail Course byID
+```css
+GET: http://online-learning-platform.test/api/course?id={id}
+
+```
+
+Get Data search Course byName
+```css
+GET: http://online-learning-platform.test/api/search/course?name={name}
+
+```
+
+Get Data list Course byPrice Lowest
+```css
+GET: http://online-learning-platform.test/api/sort/lowestprice/course
+
+```
+
+Get Data list Course byPrice Highest
+```css
+GET: http://online-learning-platform.test/api/sort/highestprice/course
+
+```
+
+Get Data list Course byPrice Free
+```css
+GET: http://online-learning-platform.test/api/sort/free/course
 
 ```
